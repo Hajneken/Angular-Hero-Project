@@ -9,10 +9,11 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
- hero: Hero = {
-   id: 1,
-   name: 'Windstorm'
- };
+ selectedHero: Hero; // no selected hero when starting the app
+
+ onSelect(hero: Hero): void {
+   this.selectedHero = hero;
+ }
 
  heroes = HEROES;
 
