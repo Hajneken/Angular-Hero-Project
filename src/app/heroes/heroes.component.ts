@@ -11,9 +11,10 @@ export class HeroesComponent implements OnInit {
 
  selectedHero: Hero; // no selected hero when starting the app
 
- onSelect(hero: Hero): void {
-   this.selectedHero = hero;
- }
+//   no longer needed
+//  onSelect(hero: Hero): void {
+//    this.selectedHero = hero;
+//  }
 
  heroes: Hero[];
 
@@ -22,16 +23,16 @@ export class HeroesComponent implements OnInit {
 //   this.heroes = this.heroService.getHeroes();
 // }  
 
-// the following works asynchronously
-getHeroes(): void {
-  this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
-}
-
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     this.getHeroes();
   }
+
+  // the following works asynchronously
+getHeroes(): void {
+  this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
+}
 
 }
