@@ -26,8 +26,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [HeroService, MessageService,
-    /* . . . */],
+  providers: [
+    HeroService,
+    MessageService
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
