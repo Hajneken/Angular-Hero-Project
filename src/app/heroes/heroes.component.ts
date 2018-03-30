@@ -20,7 +20,7 @@ export class HeroesComponent implements OnInit {
 // this  would only because of its synchronous nature, returning mock heroes
 //  getHeroes(): void {
 //   this.heroes = this.heroService.getHeroes();
-// }
+// }  
 
 // the following works asynchronously
 getHeroes(): void {
