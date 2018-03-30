@@ -17,10 +17,16 @@ export class HeroesComponent implements OnInit {
 
  heroes: Hero[];
 
- getHeroes(): void {
-  this.heroes = this.heroService.getHeroes();
-}
+// this  would only because of its synchronous nature, returning mock heroes
+//  getHeroes(): void {
+//   this.heroes = this.heroService.getHeroes();
+// }
 
+// the following works asynchronously
+getHeroes(): void {
+  this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
+}
 
   constructor(private heroService: HeroService) { }
 
